@@ -1,0 +1,231 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+  list-style: none;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background: #eafdff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.flexitem {
+  display: flex;
+  align-items: center;
+}
+.border-none {
+  outline: none;
+  border: none;
+}
+.app {
+  width: 600px;
+  height: 90vh;
+  background: #fffff0;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  overflow-y: auto;
+  box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.3);
+}
+.app::-webkit-scrollbar {
+  display: none;
+}
+.heading {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.app h3 {
+  font-size: 1rem;
+  opacity: 0.7;
+}
+.app h2 {
+  font-size: 1.5rem;
+}
+.track-container {
+  justify-content: space-between;
+  padding: 0.8rem;
+  width: 100%;
+  margin-top: 1rem;
+  border-top: 2px solid #81818136;
+  border-bottom: 2px solid #81818136;
+}
+.income-container {
+  position: relative;
+}
+.income-container h3,
+.expense-container h3 {
+  font-size: 1rem;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-inline: 4rem;
+}
+.income-container h3 {
+  color: #16ca5b;
+}
+.expense-container h3 {
+  color: #ff6363;
+}
+.income,
+.expense {
+  padding-block: 0.5rem;
+  margin-block: 0.5rem;
+  font-size: 1.2rem;
+  text-align: center;
+  font-weight: 600;
+}
+.income-container::after {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 0.08rem;
+  background: #81818136;
+  top: 50%;
+  left: 250px;
+  transform: translate(-50%, -50%);
+}
+.transaction-container h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-bottom: 2px solid #00000030;
+  padding-bottom: 0.2rem;
+  opacity: 0.8;
+}
+.history-container {
+  margin-top: 0.5rem;
+}
+.history-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-block: 0.5rem;
+  padding: 10px 20px;
+  position: relative;
+  font-weight: 500;
+}
+.history-group.add {
+  background: #ebfff2;
+}
+.history-group.subtract {
+  background: #ffebeb;
+}
+.history-group.add::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 0.2rem;
+  height: 100%;
+  background: #16ca5b;
+}
+.history-group.subtract::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 0.2rem;
+  height: 100%;
+  background: #ff6363;
+}
+.transaction-container {
+  margin-top: 2rem;
+}
+.transaction-group {
+  display: flex;
+  flex-direction: column;
+}
+.label {
+  margin: 0.8rem 0 0.2rem 0;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+.input-box {
+  font-size: 1rem;
+  background: #ffffc6;
+  padding: 10px 20px;
+  border-radius: 4px;
+}
+.btn {
+  height: 2.7rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  margin-top: 2rem;
+  width: 100%;
+  color: #fff;
+  cursor: pointer;
+  justify-content: center;
+  gap: 1rem;
+}
+.ri-delete-bin-line {
+  color: #ff6e6e;
+  font-weight: 800;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  background: #ffffff;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 1rem;
+}
+.ri-edit-line {
+  color: #16ca5b;
+  font-weight: 800;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  background: #ffffff;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 1rem;
+}
+.buttons {
+  gap: 2rem;
+}
+#add-income {
+  background: #16ca5b;
+}
+#add-expense {
+  background: #ff6e6e;
+}
+.ri-money-rupee-circle-line,
+.ri-wallet-3-line {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+@media screen and (max-width: 560px) {
+  body {
+    display: block;
+  }
+  .app {
+    width: 100%;
+    height: 100vh;
+    box-shadow: none;
+  }
+  .income-container h3,
+  .expense-container h3 {
+    margin-inline: 0rem;
+  }
+  .income-container::after {
+    left: 170px;
+  }
+}
+
+@media screen and (max-width: 460px){
+  .income-container::after {
+    left: 130px;
+  }
+  .btn{
+    font-size: .9rem;
+    gap: .5rem;
+    margin-top: 4rem;
+  }
+}

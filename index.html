@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker | Javascript Project</title>
+
+    <!-- Link Custom CSS File -->
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <div class="app">
+            <h1 class="heading">Expense Tracker</h1>
+            <h3>Your Balance</h3>
+            <h2 id="balance" class="balance">₹0.00</h2>
+            <div class="track-container flexitem">
+                <div class="income-container">
+                    <h3>Income</h3>
+                    <p class="income"></p>
+                </div>
+                <div class="expense-container">
+                    <h3>Expense</h3>
+                    <p class="expense"></p>
+                </div>
+            </div>
+            <div class="history-container">
+                <div class="history-group">
+                </div>
+            </div>
+            <div class="transaction-container">
+                <h2>Add Transaction</h2>
+                <div class="transaction-group">
+                    <span class="label">Title</span>
+                    <input type="text" id="input-title" class="input-box border-none" placeholder="Enter Title...">
+                </div>
+                <div class="transaction-group">
+                    <span class="label">Amount</span>
+                    <input type="number" id="input-amount" class="input-box border-none" placeholder="Enter Amount...">
+                </div>
+                <div class="buttons flexitem">
+                    <button class="btn flexitem border-none" id="add-income"><i class="ri-money-rupee-circle-line"></i>Add Income</button>
+                    <button class="btn flexitem border-none" id="add-expense"><i class="ri-wallet-3-line"></i>Add Expnese</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Link Custom JS File -->
+    <script src="script.js"></script>
+</body>
+</html>
